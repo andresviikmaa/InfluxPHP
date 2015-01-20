@@ -119,7 +119,7 @@ class BaseHTTP
         throw new \InvalidArgumentException("Expecting s, m or u as time precision");
     }
 
-    protected function get($url, array $args = array())
+    public function get($url, array $args = array())
     {
         $ch = $this->getCurl($url, $args);
         return $this->execCurl($ch, true);
